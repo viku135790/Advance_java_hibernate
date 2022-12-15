@@ -17,13 +17,11 @@ public class StudentUpdateController {
 		
 		System.out.println(student.getId()+" "+student.getEmail());
 		if(student !=null) {
-			student.setName("ManMohan");
+			student.setEmail("xyz@gmail.com");
 			entityTransaction.begin();
 			entityManager.merge(student);
 			entityTransaction.commit();
 			
-			System.out.println("Enter the Email");
-			System.out.println(student.getEmail());
 			System.out.println("data updated sucessfully");
 			
 		}
